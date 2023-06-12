@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -110,14 +110,14 @@ img.add_border {
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container">
                 <div class="row align-items-center">
-                <h1>cmsite</h1>
+                <h1>41023309 w17網站</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cmsite</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">41023309 w17網站</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Brython.html'>Brython</a></li>
+                     <li class='has-children'><a href='網際.html'>網際</a><ul class='dropdown'><li><a href='w17.html'>w17</a><li><a href='w16.html'>w16</a><li><a href='w15.html'>w15</a><li><a href='w14.html'>w14</a><li><a href='w13.html'>w13</a><li><a href='W12.html'>W12</a><li><a href='About-1.html'>About-1</a><li><a href='Nginx.html'>Nginx</a><li><a href='Nginx 2.html'>Nginx 2</a><li><a href='W9.html'>W9</a><li><a href='Bing.html'>Bing</a><li><a href='網站結構.html'>網站結構</a><li><a href='w5.html'>w5</a><li><a href='Brython-1.html'>Brython-1</a></li></ul><li><a href='About-2.html'>About-2</a><li><a href='Brython-2.html'>Brython-2</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,10 +141,50 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Brython.html'>Next</a> >> Brython<br /><h1>About</h1>
-<p><a href="https://github.com/mdecycu/cmsite">https://github.com/mdecycu/cmsite</a></p>
+    <div id="tipue_search_content">w14 << <a href='w14.html'>Previous</a> <a href='W12.html'>Next</a> >> W12<br /><h1>w13</h1>
+<p><a>https://stud2.cycu.org:8022 </a><br/><br/></p>
+<p>w13</p>
+<p>在 stud2 主機建立倉儲的動態系統:</p>
+<p>ssh<span> </span><a href="mailto:demo2@stud2.cycu.org">demo2@stud2.cycu.org</a> 登入後, 以 ssh-keygen 在 .ssh 目錄下建立 id_rsa,<span> </span><span>id_rsa.pub</span></p>
+<p>.ssh/config:</p>
+<div>
+<div class="syntaxhighlighter js" id="highlighter_927325">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js plain">Host github.com</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">User git</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">Hostname github.com</code></div>
+<div class="line number4 index3 alt1"><code class="js plain">ProxyCommand /usr/bin/ncat --proxy p4.cycu.org:3128 --proxy-type http %h %p</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>sftp<span> </span><a href="mailto:demo2@stud2.cycu.org">demo2@stud2.cycu.org</a> 登入後, cd .ssh 然後以 put<span> </span><span>config</span><span> </span>將代理主機的設定檔案送到 stud2 帳號下的 .ssh 目錄, 使用 get id_rsa.pub 將公鑰取下, 然後以 SciTE 編輯器打開後, 將公鑰內容送到 Github 帳號下的 settings 中的 SSH and GPG 設定區.</p>
+<p>完成上述設定後, 以 SSH 協定取下倉儲:</p>
+<p>ssh 登入帳號後, 在所在目錄 /home/帳號/, 以 git clone<span> </span><a href="mailto:git@github.com:wcm2023">git@github.com:wcm2023</a>/倉儲名稱.git repo</p>
+<p>cd repo</p>
+<p>利用以下指令, 將 acp 設為 user 可以執行 (Execute):</p>
+<p>chmod u+x acp</p>
+<p>以 sftp get 取下 repo 目錄下的 waitress_server.py</p>
+<p>在 Windows 編輯 waitress_server.py, 之後存為 server.py, 再送回 repo 目錄下.</p>
+<p>編輯過程在填入個人帳號所配發的 9 字頭的埠號.</p>
+<p>ssh 遠端登入到 repo 目錄下, 執行 hupper3 -m server.py 測試是否已經以<span> </span><a href="https://stud2.cycu.org/">https://stud2.cycu.org:</a>8字頭的埠號.<span> </span></p>
+<p><span><img alt="" height="341" src="./../images/擷取.JPG" width="541"/></span></p>
 <p></p>
-<br /> <a href='Brython.html'>Next</a> >> Brython</div>
+<p></p>
+<br />w14 << <a href='w14.html'>Previous</a> <a href='W12.html'>Next</a> >> W12</div>
         
     <!-- footer -->
       <div class="container">

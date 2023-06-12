@@ -2,6 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -140,8 +141,67 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='w17.html'>Next</a> >> w17<br /><h1>網際</h1>
-<br /> <a href='w17.html'>Next</a> >> w17</div>
+    <div id="tipue_search_content">W9 << <a href='W9.html'>Previous</a> <a href='網站結構.html'>Next</a> >> 網站結構<br /><h1>Bing</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document
+brython_div = document["brython_div"]
+# Example data for five tests
+url1 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw5.txt"
+url2 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw6.txt"
+url3 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw6-2.txt"
+url4 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/075c06b2baf1bb07665f1a98e9f88f7e81ebe1a4/1aw8.txt"
+url5 = "https://gist.githubusercontent.com/mdecycu/07f0f0817115a68d55d6ca603c5ab393/raw/239f4eb84715978daead6ac1f231af7f190a2a5e/1aw9.txt"
+ 
+'''
+test1 = ["12345:80", "67890:70"]
+test2 = ["12345:85", "67890:75"]
+test3 = ["12345:90", "67890:80"]
+test4 = ["12345:95", "67890:85"]
+test5 = ["12345:100", "67890:90"]
+'''
+test1 = open(url1).read().split("\n")[1:]
+test2 = open(url2).read().split("\n")[1:]
+test3 = open(url3).read().split("\n")[1:]
+test4 = open(url4).read().split("\n")[1:]
+test5 = open(url5).read().split("\n")[1:]
+ 
+ 
+# Create a dictionary to store the student numbers and their test scores
+student_scores = {}
+  
+# Iterate over the data for each test
+for test_data in [test1, test2, test3, test4, test5]:
+    # Iterate over the data for this test
+    for item in test_data:
+        # Split the item into its components
+        student_number, score = item.split(":")
+          
+        # Convert the score to an integer
+        try:
+            score = int(score)
+        except:
+            score = 0
+          
+        # Add the score to the list of scores for this student
+        if student_number not in student_scores:
+            student_scores[student_number] = []
+        student_scores[student_number].append(score)
+  
+# Calculate the average score for each student
+for student_number, scores in student_scores.items():
+    average_score = int(sum(scores) / len(scores))
+    #print(f"Student {student_number} has an average score of {average_score}")
+    brython_div &lt;= student_number
+    brython_div &lt;= ":"
+    brython_div &lt;= average_score
+    brython_div &lt;= html.BR()
+ 
+brython_div &lt;= data</pre>
+<p>將上述程式, 在本頁面導入 Brython 環境後, 可以直接執行, 並且將結果以 Brython browser 的 html 模組列在頁面中:</p>
+<p></p>
+<p></p>
+<div id="brython_div">40723224:57<br/>40823116:81<br/>40823128:0<br/>40823139:17<br/>40823152:74<br/>40823153:92<br/>40823218:45<br/>40823246:42<br/>40828213:44<br/>40828236:0<br/>40828237:0<br/>40828242:0<br/>40828244:0<br/>40840167:0<br/>40871106:0<br/>41023301:67<br/>41023302:38<br/>41023305:43<br/>41023306:66<br/>41023307:85<br/>41023308:50<br/>41023309:69<br/>41023310:32<br/>41023311:80<br/>41023312:72<br/>41023314:52<br/>41023315:83<br/>41023316:76<br/>41023317:76<br/>41023318:0<br/>41123101:82<br/>41123102:75<br/>41123103:0<br/>41123107:62<br/>41123112:0<br/>41123116:58<br/>41123118:48<br/>41123120:0<br/>41123121:55<br/>41123122:89<br/>41123124:67<br/>41123125:0<br/>41123129:78<br/>41123131:72<br/>41123132:66<br/>41123133:54<br/>41123134:38<br/>41123135:88<br/>41123136:32<br/>41123137:76<br/>41123139:88<br/>41123140:68<br/>41123141:50<br/>41123142:68<br/>41123143:59<br/>41123144:75<br/>41123145:42<br/>41123146:0<br/>41123148:66<br/>41123149:88<br/>41123150:69<br/>41123152:0</div>
+<p></p>
+<br />W9 << <a href='W9.html'>Previous</a> <a href='網站結構.html'>Next</a> >> 網站結構</div>
         
     <!-- footer -->
       <div class="container">
